@@ -20,7 +20,10 @@ def create_user():
         return jsonify({'success':200,"message":"Successfully created"})
     else:
        return jsonify({'success':400,"message":"unable to create User"}) 
-        
+
+@app.route('/', methods=['GET'])
+def hello():
+    return "hello"
 
 @app.route('/getAllUsers', methods=['GET'])
 def getAllUser():
